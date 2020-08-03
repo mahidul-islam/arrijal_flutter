@@ -29,3 +29,8 @@ var alerts = [
   {'text': 'alert no 2', 'seen': true, 'image': 'iphone.jpg'},
   {'text': 'alert no 3', 'seen': true, 'image': 'iphone.jpg'},
 ];
+
+const users = const {
+  'dribbble@gmail.com': '12345',
+  'hunter@gmail.com': 'hunter',
+};

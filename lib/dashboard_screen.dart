@@ -1,51 +1,28 @@
-// import 'package:ArRijal/alerts.dart';
 import 'package:flutter/material.dart';
 import 'profile.dart';
-import 'productbox.dart';
+import 'single_course.dart';
 import 'data.dart';
 import 'single_post.dart';
 import 'topics.dart';
 import 'alerts.dart';
+import 'appbar.dart';
+import 'course_list.dart';
+import 'post_list.dart';
 
-class MyApp extends StatefulWidget {
+class DashBoard extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _DashBoardState createState() => _DashBoardState();
 }
 
-class _MyAppState extends State<MyApp> {
-  Widget _buildAppBar(choice) {
-    if (choice == 0) {
-      return AppBar(
-        title: Text("Home"),
-      );
-    }
-    if (choice == 1) {
-      return AppBar(
-        title: Text("Courses"),
-      );
-    }
-    if (choice == 2) {
-      return AppBar(
-        title: Text("Topics"),
-      );
-    }
-    if (choice == 3) {
-      return AppBar(
-        title: Text("Notifications"),
-      );
-    }
-    if (choice == 4) {
-      return AppBar(
-        title: Text("Profile"),
-      );
-    }
-    return AppBar(
-      title: Text("You're in Trouble"),
-    );
-  }
-
+class _DashBoardState extends State<DashBoard> {
   int choice = 0;
-  int index = 0;
+  static const appbar_titles = <String>[
+    'Home',
+    'Courses',
+    'Topics',
+    'Notifications',
+    'Profile'
+  ];
 
   Widget _buildBody(choice) {
     if (choice == 0) {
@@ -64,7 +41,7 @@ class _MyAppState extends State<MyApp> {
       return ListView(
         children: <Widget>[
           for (var i = 0; i < data.length; i++)
-            ProductBox(
+            Course(
               name: data[i]['name'],
               description: data[i]['des'],
               price: data[i]['price'],
@@ -117,7 +94,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(choice),
+      appBar: MyAppbar(
+        title: appbar_titles[choice],
+      ),
       body: _buildBody(choice),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -144,7 +123,6 @@ class _MyAppState extends State<MyApp> {
           ),
         ],
         currentIndex: choice,
-        // selectedItemColor: Colors.amber,
         onTap: _changeView,
       ),
     );

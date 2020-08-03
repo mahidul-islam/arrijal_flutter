@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(ArRijal());
 
-class MyApp extends StatelessWidget {
+class ArRijal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

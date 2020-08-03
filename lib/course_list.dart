@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProductBox extends StatelessWidget {
-  ProductBox({Key key, this.name, this.description, this.price, this.image})
+class Course extends StatelessWidget {
+  Course({Key key, this.name, this.description, this.price, this.image})
       : super(key: key);
   final String name;
   final String description;
