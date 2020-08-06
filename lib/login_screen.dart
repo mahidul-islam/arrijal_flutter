@@ -4,6 +4,7 @@ import 'dashboard_screen.dart';
 import 'data.dart';
 
 class LoginScreen extends StatelessWidget {
+  static const routeName = '/login';
   Duration get loginTime => Duration(milliseconds: 2250);
 
   Future<String> _authUser(LoginData data) {
