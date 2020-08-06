@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'data.dart';
 
 class AlertScreen extends StatefulWidget {
   static const routeName = '/alerts';
@@ -7,6 +8,33 @@ class AlertScreen extends StatefulWidget {
 }
 
 class _AlertScreenState extends State<AlertScreen> {
+  Widget _buildAlert(i) {
+    print(i);
+    return ListTile(
+      title: Text(
+        alerts[i]['text'],
+      ),
+    );
+  }
+
+  Widget _buildAlerts() {
+    return ListView.builder(
+      padding: EdgeInsets.all(16.0),
+      itemBuilder: (context, i) {
+        if (i.isOdd) return Divider(); /*2*/
+
+        final index = i ~/ 2; /*3*/
+        // if (index >= _suggestions.length) {
+        //   // _suggestions.addAll(generateWordPairs().take(10)); /*4*/
+        // }
+        if (index >= alerts.length) {
+          return null;
+        }
+        return _buildAlert(index);
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -18,13 +46,7 @@ class _AlertScreenState extends State<AlertScreen> {
               'Notifications',
             ),
           ),
-          body: Container(
-            child: Center(
-              child: Text(
-                'Alert Page',
-              ),
-            ),
-          ),
+          body: _buildAlerts(),
         ),
       ),
     );
