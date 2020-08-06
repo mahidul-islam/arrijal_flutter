@@ -1,246 +1,180 @@
 import 'package:flutter/material.dart';
+import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
+import 'package:ArRijal/constants.dart';
+import 'package:ArRijal/widgets/profile_list_item.dart';
 
 class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Card(
-        child: Column(
-          children: [
-            Card(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Center(
-                        child: Card(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(100.0),
-                            child: Image.asset(
-                              "assets/appimages/placeholder.120.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100.0),
-                          ),
-                          margin: EdgeInsets.all(30.0),
-                          elevation: 5.0,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        child: Padding(
-                          padding: EdgeInsets.all(16),
-                          child: Text(
-                            "User Name",
-                            style: TextStyle(
-                              fontSize: 28,
-                              color: Colors.amber,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Icon(Icons.edit),
-                    ],
-                  ),
-                ],
-              ),
-              elevation: 16.0,
-            ),
-            Container(
-              child: Padding(
-                child: Card(
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Attribute :",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Value",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Attribute :",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Value",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Attribute :",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Value",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Attribute :",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Value",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Attribute :",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Value",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Attribute :",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "Value",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+    return ThemeProvider(
+      initTheme: kDarkTheme,
+      child: Builder(
+        builder: (context) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeProvider.of(context),
+            home: ProfileScreen(),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class ProfileScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    ScreenUtil.init(context, height: 800, width: 415, allowFontScaling: true);
+
+    var profileInfo = Expanded(
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: kSpacingUnit.w * 10,
+            width: kSpacingUnit.w * 10,
+            margin: EdgeInsets.only(top: kSpacingUnit.w * 3),
+            child: Stack(
+              children: <Widget>[
+                CircleAvatar(
+                  radius: kSpacingUnit.w * 5,
+                  backgroundImage: AssetImage('assets/images/avatar.png'),
                 ),
-                padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
-              ),
-            )
-          ],
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    height: kSpacingUnit.w * 2.5,
+                    width: kSpacingUnit.w * 2.5,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).accentColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      heightFactor: kSpacingUnit.w * 1.5,
+                      widthFactor: kSpacingUnit.w * 1.5,
+                      child: Icon(
+                        LineAwesomeIcons.pen,
+                        color: kDarkPrimaryColor,
+                        size: ScreenUtil().setSp(kSpacingUnit.w * 1.5),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: kSpacingUnit.w * 2),
+          Text(
+            'Syed Mahide',
+            style: kTitleTextStyle,
+          ),
+          SizedBox(
+            height: kSpacingUnit.w * 0.5,
+          ),
+          Text(
+            'mahidekarim@gmail.com',
+            style: kCaptionTextStyle,
+          ),
+          SizedBox(height: kSpacingUnit.w * 2),
+//          Container(
+//            height: kSpacingUnit.w * 4,
+//            width: kSpacingUnit.w * 20,
+//            decoration: BoxDecoration(
+//              borderRadius: BorderRadius.circular(kSpacingUnit.w * 3),
+//              color: Theme.of(context).accentColor,
+//            ),
+////            child: Center(
+////              child: Text(
+////                'Upgrade to Pro',
+////                style: kButtonTextStyle,
+////              ),
+////            ),
+//          )
+        ],
+      ),
+    );
+
+    var themeSwitcher = ThemeSwitcher(
+      builder: (context) {
+        return AnimatedCrossFade(
+          duration: Duration(microseconds: 200),
+          crossFadeState:
+              ThemeProvider.of(context).brightness == Brightness.dark
+                  ? CrossFadeState.showFirst
+                  : CrossFadeState.showSecond,
+          firstChild: GestureDetector(
+            onTap: () =>
+                ThemeSwitcher.of(context).changeTheme(theme: kLightTheme),
+            child: Icon(
+              LineAwesomeIcons.sun,
+              size: ScreenUtil().setSp(kSpacingUnit.w * 3),
+            ),
+          ),
+          secondChild: GestureDetector(
+            onTap: () =>
+                ThemeSwitcher.of(context).changeTheme(theme: kDarkTheme),
+            child: Icon(
+              LineAwesomeIcons.moon,
+              size: ScreenUtil().setSp(kSpacingUnit.w * 3),
+            ),
+          ),
+        );
+      },
+    );
+
+    var header = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        SizedBox(width: kSpacingUnit.w * 3),
+        Icon(
+          LineAwesomeIcons.arrow_left,
+          size: ScreenUtil().setSp(kSpacingUnit.w * 3),
         ),
+        profileInfo,
+        themeSwitcher,
+        SizedBox(width: kSpacingUnit.w * 3),
+      ],
+    );
+
+    return ThemeSwitchingArea(
+      child: Builder(
+        builder: (context) {
+          return Scaffold(
+            body: Column(
+              children: <Widget>[
+                SizedBox(height: kSpacingUnit.w * 5),
+                header,
+                Expanded(
+                  child: ListView(
+                    children: <Widget>[
+                      ProfileListItem(
+                          icon: LineAwesomeIcons.user_shield, text: 'Privacy'),
+                      ProfileListItem(
+                        icon: LineAwesomeIcons.history,
+                        text: 'Purchase History',
+                      ),
+                      ProfileListItem(
+                        icon: LineAwesomeIcons.cog,
+                        text: 'Settings',
+                      ),
+                      ProfileListItem(
+                        icon: LineAwesomeIcons.user_plus,
+                        text: 'Invite a Friend',
+                      ),
+                      ProfileListItem(
+                        icon: LineAwesomeIcons.alternate_sign_out,
+                        text: 'Logout',
+                        hasNavigation: false,
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          );
+        },
       ),
     );
   }
