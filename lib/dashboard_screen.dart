@@ -33,17 +33,26 @@ class _DashBoardState extends State<DashBoard> {
 
   @override
   Widget build(BuildContext context) {
+    Widget _buildPost(i) {
+      return SinglePostListItem(
+        title: posts[i]['title'],
+        description: posts[i]['des'],
+        image: posts[i]['image'],
+      );
+    }
+
     Widget _buildBody(choice) {
       if (choice == 0) {
-        return ListView(
-          children: <Widget>[
-            for (var i = 0; i < posts.length; i++)
-              SinglePost(
-                title: posts[i]['title'],
-                description: posts[i]['des'],
-                image: posts[i]['image'],
-              )
-          ],
+        return ListView.builder(
+          itemBuilder: (context, i) {
+            // if (i >= _suggestions.length) {
+            //   // _suggestions.addAll(generateWordPairs().take(10)); /*4*/
+            // }
+            if (i >= posts.length) {
+              return null;
+            }
+            return _buildPost(i);
+          },
         );
       }
       if (choice == 1) {
@@ -70,16 +79,6 @@ class _DashBoardState extends State<DashBoard> {
         );
       }
       if (choice == 3) {
-        // return ListView(
-        //   children: <Widget>[
-        //     for (var i = 0; i < alerts.length; i++)
-        //       Alert(
-        //         text: alerts[i]['text'],
-        //         seen: alerts[i]['seen'],
-        //         image: alerts[i]['image'],
-        //       )
-        //   ],
-        // );
         return ShopScreen();
       }
       if (choice == 4) {

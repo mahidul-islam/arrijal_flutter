@@ -16,6 +16,19 @@ var posts = [
   {'title': 'Demo Title 2', 'des': 'Post description', 'image': 'iphone.jpg'},
   {'title': 'Demo Title 3', 'des': 'Post description', 'image': 'iphone.jpg'},
   {'title': 'Demo Title 4', 'des': 'Post description', 'image': 'iphone.jpg'},
+  {'title': 'Demo Title 5', 'des': 'Post description', 'image': 'iphone.jpg'},
+  {'title': 'Demo Title 6', 'des': 'Post description', 'image': 'iphone.jpg'},
+  {'title': 'Demo Title 7', 'des': 'Post description', 'image': 'iphone.jpg'},
+  {'title': 'Demo Title 8', 'des': 'Post description', 'image': 'iphone.jpg'},
+];
+
+var comments = [
+  {'text': 'This is Comment 1', 'image': 'avatar.png'},
+  {'text': 'This is Comment 2', 'image': 'avatar.png'},
+  {'text': 'This is Comment 3', 'image': 'avatar.png'},
+  {'text': 'This is Comment 4', 'image': 'avatar.png'},
+  {'text': 'This is Comment 5', 'image': 'avatar.png'},
+  {'text': 'This is Comment 6', 'image': 'avatar.png'},
 ];
 
 var topics = [

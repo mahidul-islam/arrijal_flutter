@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'single_post.dart';
 
-class SinglePost extends StatelessWidget {
-  SinglePost({Key key, this.title, this.description, this.image})
+class SinglePostListItem extends StatelessWidget {
+  SinglePostListItem({Key key, this.title, this.description, this.image})
       : super(key: key);
   final String title;
   final String description;
@@ -11,14 +12,28 @@ class SinglePost extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(2),
       height: 120,
-      child: Row(
-        children: <Widget>[
-          Card(
-            child: Text(
-              title,
+      child: Card(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(5.00),
+                child: GestureDetector(
+                  onTap: () => {
+                    Navigator.pushNamed(
+                      context,
+                      SinglePost.routeName,
+                    )
+                  },
+                  child: Text(
+                    title,
+                  ),
+                ),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

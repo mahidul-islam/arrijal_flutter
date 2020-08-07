@@ -25,16 +25,17 @@ class _SearchPageState extends State<SearchPage>
   Widget _getUpperLayer() {
     return Container(
       decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.05),
-              offset: Offset(0, -3),
-              blurRadius: 10,
-            )
-          ],
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(24), topLeft: Radius.circular(24)),
-          color: Colors.white),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(0, 0, 0, 0.05),
+            offset: Offset(0, -3),
+            blurRadius: 10,
+          )
+        ],
+        borderRadius: BorderRadius.only(
+            topRight: Radius.circular(24), topLeft: Radius.circular(24)),
+        color: Colors.white,
+      ),
       child: ListView(
         physics: NeverScrollableScrollPhysics(),
         children: <Widget>[
