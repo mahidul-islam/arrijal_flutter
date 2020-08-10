@@ -75,50 +75,8 @@ class ProfileScreen extends StatelessWidget {
             style: kCaptionTextStyle,
           ),
           SizedBox(height: kSpacingUnit.w * 2),
-//          Container(
-//            height: kSpacingUnit.w * 4,
-//            width: kSpacingUnit.w * 20,
-//            decoration: BoxDecoration(
-//              borderRadius: BorderRadius.circular(kSpacingUnit.w * 3),
-//              color: Theme.of(context).accentColor,
-//            ),
-////            child: Center(
-////              child: Text(
-////                'Upgrade to Pro',
-////                style: kButtonTextStyle,
-////              ),
-////            ),
-//          )
         ],
       ),
-    );
-
-    var themeSwitcher = ThemeSwitcher(
-      builder: (context) {
-        return AnimatedCrossFade(
-          duration: Duration(microseconds: 200),
-          crossFadeState:
-              ThemeProvider.of(context).brightness == Brightness.dark
-                  ? CrossFadeState.showFirst
-                  : CrossFadeState.showSecond,
-          firstChild: GestureDetector(
-            onTap: () =>
-                ThemeSwitcher.of(context).changeTheme(theme: kLightTheme),
-            child: Icon(
-              LineAwesomeIcons.sun,
-              size: ScreenUtil().setSp(kSpacingUnit.w * 3),
-            ),
-          ),
-          secondChild: GestureDetector(
-            onTap: () =>
-                ThemeSwitcher.of(context).changeTheme(theme: kDarkTheme),
-            child: Icon(
-              LineAwesomeIcons.moon,
-              size: ScreenUtil().setSp(kSpacingUnit.w * 3),
-            ),
-          ),
-        );
-      },
     );
 
     var header = Row(
@@ -126,12 +84,7 @@ class ProfileScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         SizedBox(width: kSpacingUnit.w * 3),
-//        Icon(
-//          LineAwesomeIcons.arrow_left,
-//          size: ScreenUtil().setSp(kSpacingUnit.w * 3),
-//        ),
         profileInfo,
-//        themeSwitcher,
         SizedBox(width: kSpacingUnit.w * 3),
       ],
     );
