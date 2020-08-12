@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'post_comments.dart';
+import 'single_post_body.dart';
 
 class SinglePost extends StatefulWidget {
   static const routeName = '/single_post';
@@ -16,14 +17,7 @@ class _SinglePostState extends State<SinglePost> {
           'Post Details',
         ),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          child: Column(
-            children: <Widget>[],
-          ),
-        ),
-      ),
+      body: SinglePostBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
