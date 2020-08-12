@@ -33,11 +33,15 @@ class _PostCommentsState extends State<PostComments> {
                 padding: const EdgeInsets.symmetric(
                     horizontal: 72.0, vertical: 16.0),
                 child: RaisedButton(
-                  onPressed: null,
+                  onPressed: () {
+                    print("Pressed for comment");
+                  },
+                  color: Colors.blue,
                   child: Text(
                     'Comment',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -60,6 +64,7 @@ class _PostCommentsState extends State<PostComments> {
                     Padding(
                       padding: const EdgeInsets.only(right: 16.0),
                       child: CircleAvatar(
+                        child: Image.asset('assets/images/avatar.png'),
                         maxRadius: 14,
                       ),
                     ),
@@ -134,6 +139,7 @@ class _PostCommentsState extends State<PostComments> {
                     Padding(
                       padding: const EdgeInsets.only(right: 16.0),
                       child: CircleAvatar(
+                        child: Image.asset('assets/images/avatar.png'),
                         maxRadius: 14,
                       ),
                     ),
@@ -208,6 +214,7 @@ class _PostCommentsState extends State<PostComments> {
                     Padding(
                       padding: const EdgeInsets.only(right: 16.0),
                       child: CircleAvatar(
+                        child: Image.asset('assets/images/avatar.png'),
                         maxRadius: 14,
                       ),
                     ),
