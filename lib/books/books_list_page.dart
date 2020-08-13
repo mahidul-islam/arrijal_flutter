@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'book_category.dart';
-import 'data.dart';
+import '../data.dart';
 import 'book_item_card.dart';
 import 'book_details_page.dart';
 

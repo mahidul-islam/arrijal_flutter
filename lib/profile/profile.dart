@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
-import 'package:ArRijal/constants.dart';
-import 'package:ArRijal/widgets/profile_list_item.dart';
+import 'package:ArRijal/profile/constants.dart';
+import 'package:ArRijal/profile/widgets/profile_list_item.dart';
 
 class Profile extends StatelessWidget {
   @override

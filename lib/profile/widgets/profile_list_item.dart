@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
-import 'package:ArRijal/constants.dart';
+import 'package:ArRijal/profile/constants.dart';
 
-class ProfileListItem extends StatelessWidget{
+class ProfileListItem extends StatelessWidget {
   final IconData icon;
   final String text;
   final bool hasNavigation;
@@ -12,7 +12,7 @@ class ProfileListItem extends StatelessWidget{
     Key key,
     this.icon,
     this.text,
-    this.hasNavigation=true,
+    this.hasNavigation = true,
   }) : super(key: key);
 
   @override
@@ -37,8 +37,7 @@ class ProfileListItem extends StatelessWidget{
             this.icon,
             size: kSpacingUnit.w * 2.5,
           ),
-          SizedBox(
-              width: kSpacingUnit.w * 1.5),
+          SizedBox(width: kSpacingUnit.w * 1.5),
           Text(
             this.text,
             style: kTitleTextStyle.copyWith(
@@ -55,5 +54,4 @@ class ProfileListItem extends StatelessWidget{
       ),
     );
   }
-
 }

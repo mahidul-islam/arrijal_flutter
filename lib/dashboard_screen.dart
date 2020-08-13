@@ -1,13 +1,13 @@
-import 'books_list_page.dart';
+import 'books/books_list_page.dart';
 import 'package:flutter/material.dart';
-import 'profile.dart';
-import 'single_course.dart';
+import 'profile/profile.dart';
+import 'courses/single_course.dart';
 import 'data.dart';
-import 'single_post.dart';
-import 'topics.dart';
+import 'posts/single_post.dart';
+import 'wiki/topics.dart';
 import 'appbar.dart';
-import 'course_list.dart';
-import 'post_list.dart';
+import 'courses/course_list.dart';
+import 'posts/post_list.dart';
 
 class DashBoard extends StatefulWidget {
   static const routeName = '/';

@@ -20,10 +20,6 @@ class BookDetailsPage extends StatelessWidget {
     return AppBar(
       backgroundColor: product.color,
       elevation: 0,
-      // leading: IconButton(
-      //   icon: Icon(Icons.backspace),
-      //   onPressed: () => Navigator.pop(context),
-      // ),
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.search),
