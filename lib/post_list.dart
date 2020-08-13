@@ -63,7 +63,7 @@ class SinglePostListItem extends StatelessWidget {
                     children: <Widget>[
                       Icon(
                         Icons.star,
-                        color: Colors.red[500],
+                        // color: Colors.red[500],
                       ),
                       Text('4.5'),
                     ],

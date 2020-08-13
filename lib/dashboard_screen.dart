@@ -1,4 +1,4 @@
-import 'package:ArRijal/shop_items.dart';
+import 'books_list_page.dart';
 import 'package:flutter/material.dart';
 import 'profile.dart';
 import 'single_course.dart';
@@ -79,7 +79,7 @@ class _DashBoardState extends State<DashBoard> {
         );
       }
       if (choice == 3) {
-        return ShopScreen();
+        return BookListScreen();
       }
       if (choice == 4) {
         return Profile();
@@ -115,8 +115,8 @@ class _DashBoardState extends State<DashBoard> {
             title: Text('Topics'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shop),
-            title: Text('Shop'),
+            icon: Icon(Icons.local_library),
+            title: Text('Books'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.face),
