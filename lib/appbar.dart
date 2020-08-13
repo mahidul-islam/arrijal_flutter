@@ -2,19 +2,7 @@ import 'package:ArRijal/login_screen.dart';
 import 'package:ArRijal/searchpage.dart';
 import 'package:flutter/material.dart';
 import 'alert_page.dart';
-
-class Choice {
-  const Choice({this.title, this.icon});
-  final String title;
-  final IconData icon;
-}
-
-const List<Choice> choices = const <Choice>[
-  const Choice(title: 'LogIn', icon: Icons.arrow_back),
-  const Choice(title: 'Bicycle', icon: Icons.directions_bike),
-  const Choice(title: 'Boat', icon: Icons.directions_boat),
-  const Choice(title: 'Bus', icon: Icons.directions_bus),
-];
+import 'data.dart';
 
 class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => new Size.fromHeight(kToolbarHeight);

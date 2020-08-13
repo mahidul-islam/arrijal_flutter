@@ -1,13 +1,11 @@
 import 'books/books_list_page.dart';
 import 'package:flutter/material.dart';
 import 'profile/profile.dart';
-import 'courses/single_course.dart';
 import 'data.dart';
-import 'posts/single_post.dart';
-import 'wiki/topics.dart';
 import 'appbar.dart';
 import 'courses/course_list.dart';
 import 'posts/post_list.dart';
+import 'wiki/wiki_screen.dart';
 
 class DashBoard extends StatefulWidget {
   static const routeName = '/';
@@ -69,14 +67,15 @@ class _DashBoardState extends State<DashBoard> {
         );
       }
       if (choice == 2) {
-        return ListView(
-          children: <Widget>[
-            for (var i = 0; i < topics.length; i++)
-              Topic(
-                title: topics[i]['title'],
-              )
-          ],
-        );
+        // return ListView(
+        //   children: <Widget>[
+        //     for (var i = 0; i < topics.length; i++)
+        //       Topic(
+        //         title: topics[i]['title'],
+        //       )
+        //   ],
+        // );
+        return WikiScreen();
       }
       if (choice == 3) {
         return BookListScreen();
