@@ -94,6 +94,7 @@ class _DashBoardState extends State<DashBoard> {
     }
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: MyAppbar(
         title: appbar_titles[choice],
       ),

@@ -12,7 +12,7 @@ class ArRijal extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ArRijal App',
-      initialRoute: DashBoard.routeName,
+      initialRoute: LoginScreen.routeName,
       routes: {
         SinglePost.routeName: (context) => SinglePost(),
         DashBoard.routeName: (context) => DashBoard(),

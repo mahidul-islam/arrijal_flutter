@@ -10,9 +10,10 @@ class SinglePostListItem extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(2),
-      height: 240,
+      padding: EdgeInsets.symmetric(horizontal: 2, vertical: 6),
+      height: 245,
       child: Card(
+        color: Colors.white70,
         child: Column(
           children: <Widget>[
             Row(
@@ -61,10 +62,7 @@ class SinglePostListItem extends StatelessWidget {
                   padding: EdgeInsets.only(right: 12),
                   child: Row(
                     children: <Widget>[
-                      Icon(
-                        Icons.star,
-                        // color: Colors.red[500],
-                      ),
+                      Icon(Icons.star),
                       Text('4.5'),
                     ],
                   ),
@@ -108,7 +106,7 @@ class SinglePostListItem extends StatelessWidget {
                                     Icon(
                                       Icons.watch_later,
                                     ),
-                                    Text('Watch Later'),
+                                    Text('Read Later'),
                                   ],
                                 ),
                               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ArRijal/data.dart';
-import 'topics.dart';
+import 'topic_card.dart';
 
 class RecommendedTopics extends StatelessWidget {
   @override
@@ -15,6 +15,7 @@ class RecommendedTopics extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(25),
         child: Card(
+          color: Colors.white70,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
