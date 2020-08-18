@@ -1,11 +1,10 @@
+import 'package:ArRijal/posts/post_page.dart';
 import 'books/books_list_page.dart';
 import 'package:flutter/material.dart';
 import 'profile/profile.dart';
-import 'data.dart';
 import 'appbar.dart';
-import 'courses/course_list.dart';
-import 'posts/post_list.dart';
 import 'wiki/wiki_screen.dart';
+import 'courses/course_page.dart';
 
 class DashBoard extends StatefulWidget {
   static const routeName = '/';
@@ -31,50 +30,15 @@ class _DashBoardState extends State<DashBoard> {
 
   @override
   Widget build(BuildContext context) {
-    Widget _buildPost(i) {
-      return SinglePostListItem(
-        title: posts[i]['title'],
-        description: posts[i]['des'],
-        image: posts[i]['image'],
-      );
-    }
-
     Widget _buildBody(choice) {
       if (choice == 0) {
-        return ListView.builder(
-          itemBuilder: (context, i) {
-            // if (i >= _suggestions.length) {
-            //   // _suggestions.addAll(generateWordPairs().take(10)); /*4*/
-            // }
-            if (i >= posts.length) {
-              return null;
-            }
-            return _buildPost(i);
-          },
-        );
+        return PostPage();
       }
       if (choice == 1) {
-        return ListView(
-          children: <Widget>[
-            for (var i = 0; i < data.length; i++)
-              Course(
-                name: data[i]['name'],
-                description: data[i]['des'],
-                price: data[i]['price'],
-                image: data[i]['image'],
-              )
-          ],
-        );
+        return CoursePage();
+        // return Text('hello');
       }
       if (choice == 2) {
-        // return ListView(
-        //   children: <Widget>[
-        //     for (var i = 0; i < topics.length; i++)
-        //       Topic(
-        //         title: topics[i]['title'],
-        //       )
-        //   ],
-        // );
         return WikiScreen();
       }
       if (choice == 3) {
