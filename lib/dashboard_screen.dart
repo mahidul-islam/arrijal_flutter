@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'profile/profile.dart';
 import 'appbar.dart';
 import 'wiki/wiki_screen.dart';
-import 'courses/course_page.dart';
+// import 'courses/course_page.dart';
+import 'courses/main_page/course_main_page.dart';
 
 class DashBoard extends StatefulWidget {
   static const routeName = '/';
@@ -35,8 +36,8 @@ class _DashBoardState extends State<DashBoard> {
         return PostPage();
       }
       if (choice == 1) {
-        return CoursePage();
-        // return Text('hello');
+        // return CoursePage();
+        return CourseMainPage();
       }
       if (choice == 2) {
         return WikiScreen();
