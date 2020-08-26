@@ -1,4 +1,3 @@
-import 'package:ArRijal/posts/post_page.dart';
 import 'books/books_list_page.dart';
 import 'package:flutter/material.dart';
 import 'profile/profile.dart';

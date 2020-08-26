@@ -5,7 +5,6 @@ import 'package:ArRijal/posts/post_detail_view_page/post_detail_view.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'searchpage.dart';
-// import 'posts/single_post.dart';
 
 void main() => runApp(ArRijal());
 
@@ -14,9 +13,8 @@ class ArRijal extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ArRijal App',
-      initialRoute: DashBoard.routeName,
+      initialRoute: LoginScreen.routeName,
       routes: {
-        // SinglePost.routeName: (context) => SinglePost(),
         DashBoard.routeName: (context) => DashBoard(),
         LoginScreen.routeName: (context) => LoginScreen(),
         SearchPage.routeName: (context) => SearchPage(),

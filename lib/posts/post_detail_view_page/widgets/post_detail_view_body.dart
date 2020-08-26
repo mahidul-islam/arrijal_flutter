@@ -18,7 +18,7 @@ class PostDetailViewBody extends StatelessWidget {
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(width: 8.0, color: Colors.white)),
-                child: Image.asset('assets/images/avatar.png'),
+                child: Image.asset('assets/images/' + '${post.authorImage}'),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -45,7 +45,7 @@ class PostDetailViewBody extends StatelessWidget {
                       Container(
                         padding: EdgeInsets.only(bottom: 8.0),
                         child: Text(
-                          "Recommended for you",
+                          "${post.author}",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
