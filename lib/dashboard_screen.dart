@@ -5,6 +5,7 @@ import 'profile/profile.dart';
 import 'appbar.dart';
 import 'wiki/wiki_screen.dart';
 import 'courses/main_page/course_main_page.dart';
+import 'posts/main_page/all_post_list_page.dart';
 
 class DashBoard extends StatefulWidget {
   static const routeName = '/';
@@ -32,10 +33,10 @@ class _DashBoardState extends State<DashBoard> {
   Widget build(BuildContext context) {
     Widget _buildBody(choice) {
       if (choice == 0) {
-        return PostPage();
+        // return PostPage();
+        return AllPostListPage();
       }
       if (choice == 1) {
-        // return CoursePage();
         return CourseMainPage();
       }
       if (choice == 2) {

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ArRijal/constants.dart';
-import '../../models/course.dart';
 import '../blocs/all_course_bloc.dart';
 
 class AllCourseList extends StatefulWidget {
