@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'profile/profile.dart';
 import 'appbar.dart';
 import 'wiki/wiki_screen.dart';
-// import 'courses/course_page.dart';
 import 'courses/main_page/course_main_page.dart';
 
 class DashBoard extends StatefulWidget {
