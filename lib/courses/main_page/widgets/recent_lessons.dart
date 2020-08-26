@@ -26,6 +26,9 @@ class _RecentLessonListState extends State<RecentLessonList> {
         child: StreamBuilder<List<Lesson>>(
           stream: _lessonBloc.lessonListStream,
           builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return CircularProgressIndicator();
+            }
             return Container(
               child: Column(
                 children: [

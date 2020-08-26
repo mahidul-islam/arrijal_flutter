@@ -25,7 +25,13 @@ class _AddedCourseListState extends State<AddedCourseList> {
         width: double.infinity,
         child: StreamBuilder<List<Course>>(
           stream: _courseBloc.courseListStream,
+          // initialData: ,
           builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              print('called');
+              print('========================================================');
+              return CircularProgressIndicator();
+            }
             return Container(
               child: Column(
                 children: [
@@ -65,12 +71,15 @@ class _AddedCourseListState extends State<AddedCourseList> {
                               Container(
                                 height: 60,
                                 width: 60,
-                                child: Image.asset('assets/course/course1.jpg'),
+                                child: Image.asset(
+                                  'assets/course/' +
+                                      '${snapshot.data[index].imagePath}',
+                                ),
                               ),
                               Column(
                                 children: <Widget>[
                                   Text(
-                                    'AP/College Calculus AB',
+                                    '${snapshot.data[index].name}',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
