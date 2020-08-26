@@ -1,4 +1,5 @@
 import 'package:ArRijal/alert_page.dart';
+import 'package:ArRijal/courses/course_list_page/all_course_list_page.dart';
 import 'package:ArRijal/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
@@ -19,6 +20,7 @@ class ArRijal extends StatelessWidget {
         LoginScreen.routeName: (context) => LoginScreen(),
         SearchPage.routeName: (context) => SearchPage(),
         AlertScreen.routeName: (context) => AlertScreen(),
+        AllCourseListPage.routeName: (context) => AllCourseListPage(),
       },
       theme: ThemeData(
         brightness: Brightness.light,

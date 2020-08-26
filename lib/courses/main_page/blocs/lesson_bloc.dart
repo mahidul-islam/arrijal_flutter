@@ -8,7 +8,7 @@
 // 7 dispose
 
 import 'dart:async';
-import '../models/lesson.dart';
+import '../../models/lesson.dart';
 
 class LessonBloc {
   List<Lesson> _lessonList = [

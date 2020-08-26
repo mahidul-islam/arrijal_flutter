@@ -111,11 +111,11 @@ class SinglePostListItem extends StatelessWidget {
                                 ),
                               ),
                               RaisedButton(
-                                onPressed: () => {
+                                onPressed: () {
                                   Navigator.pushNamed(
                                     context,
                                     SinglePost.routeName,
-                                  ),
+                                  );
                                 },
                                 color: Colors.blue,
                                 child: Text(

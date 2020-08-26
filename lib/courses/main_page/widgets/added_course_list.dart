@@ -1,6 +1,7 @@
 import 'package:ArRijal/constants.dart';
+import 'package:ArRijal/courses/course_list_page/all_course_list_page.dart';
 import 'package:flutter/material.dart';
-import '../models/course.dart';
+import '../../models/course.dart';
 import '../blocs/course_bloc.dart';
 
 class AddedCourseList extends StatefulWidget {
@@ -28,9 +29,7 @@ class _AddedCourseListState extends State<AddedCourseList> {
           // initialData: ,
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
-              print('called');
-              print('========================================================');
-              return CircularProgressIndicator();
+              return Center(child: CircularProgressIndicator());
             }
             return Container(
               child: Column(
@@ -50,10 +49,15 @@ class _AddedCourseListState extends State<AddedCourseList> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(16),
-                        child: Text(
-                          'Edit',
-                          style: TextStyle(color: Colors.red),
+                        padding: EdgeInsets.only(top: 4, right: 4),
+                        child: IconButton(
+                          icon: Icon(Icons.edit),
+                          onPressed: () {
+                            Navigator.pushNamed(
+                              context,
+                              AllCourseListPage.routeName,
+                            );
+                          },
                         ),
                       )
                     ],

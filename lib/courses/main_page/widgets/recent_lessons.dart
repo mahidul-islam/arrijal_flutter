@@ -1,6 +1,6 @@
 import 'package:ArRijal/constants.dart';
 import 'package:flutter/material.dart';
-import '../models/lesson.dart';
+import '../../models/lesson.dart';
 import '../blocs/lesson_bloc.dart';
 
 class RecentLessonList extends StatefulWidget {
@@ -27,7 +27,7 @@ class _RecentLessonListState extends State<RecentLessonList> {
           stream: _lessonBloc.lessonListStream,
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
-              return CircularProgressIndicator();
+              return Center(child: CircularProgressIndicator());
             }
             return Container(
               child: Column(
@@ -50,6 +50,7 @@ class _RecentLessonListState extends State<RecentLessonList> {
                   Divider(),
                   ListView.builder(
                     shrinkWrap: true,
+                    physics: ClampingScrollPhysics(),
                     itemCount: kRecentLessonNumberToShow,
                     itemBuilder: (context, index) {
                       return Column(
