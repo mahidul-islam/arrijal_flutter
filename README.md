@@ -1,4 +1,4 @@
-# ArRijal
+# ArRijal Mobile App
 
 A Project With A Big Dream.
 
