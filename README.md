@@ -1,16 +1,16 @@
 # ArRijal
 
-A new Flutter project.
+A Project With A Big Dream.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+In This project we are trying to copy [Medium](https://medium.com/), [Wikipedia](https://wikipedia.com/), [Khan Academy](https://bn.khanacademy.org/), and create a Online Book Shop. 
 
-A few resources to get you started if this is your first Flutter project:
+Thus far i have implemented following features in the app:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+    - Used flutter_login package for login/sign-in functions.
+    - Used bloc methods to separate the business logic.
+    - Used routing in the app.
+    - Used streambuilder, and listviewbuilder in the app. 
+    - Backend of the app is under development, so all the data is demo data.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
